@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: myapp
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 3440fe63-cac3-4095-8430-0a1d470bb30d
+        group: group1
+        #多dataId配置
+        extension-configs[0]:
+          #未指定group,group默认值为DEFAULT_GROUP
+          data-id: extension0.yaml
+        extension-configs[1]:
+          data-id: extension1.yaml
+          group: myGroup
+        extension-configs[2]:
+          data-id: extension2.yaml
+          group: mygroupp
+          #支持动态刷新
+          refresh: true

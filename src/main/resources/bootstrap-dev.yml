@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: myapp
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 13331a12-0040-4034-a255-fec1e97bdccb
+        group: group1
